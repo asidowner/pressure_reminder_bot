@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "pressure_reminder"
+version = "0.1.0"
+description = "Bot for remind check blood pressure and save this data"
+authors = ["Anton Sidorenkov <asid.owner@gmail.com>"]
+packages = [
+    {include = 'pd_bot'}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-telegram-bot = "^13.13"
+matplotlib = "^3.5.2"
+pytz = "^2022.1"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^5.0.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pd-bot = 'pd_bot.scripts.pd_bot_start:run'
